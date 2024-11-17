@@ -1,6 +1,7 @@
 import React from "react";
 
 import PostLine from "../../components/organisms/PostLine";
+import Comments from "../../components/organisms/Comments";
 
 interface PostProps {
     postImage: {
@@ -17,15 +18,22 @@ interface PostProps {
     postCategory: string[];
 };
 
+interface CommentsProps {
+    firstLetter: string;
+    username: string;
+    content: string;
+    likeAmount: number;
+};
+
 const HomePage: React.FC = () => {
 
     /** esta constante representa o retorno da api fictícia */
     const posts: PostProps[] = [
         {
-            postImage: { 
+            postImage: {
                 path: require("./image.png"),
                 alt: "Imagem do Post",
-                title: "Imagem do Post" 
+                title: "Imagem do Post"
             },
             postDate: "17 de Novembro de 2024",
             headline: {
@@ -36,10 +44,10 @@ const HomePage: React.FC = () => {
             postCategory: ["Tecnologia", "Trabalho"]
         },
         {
-            postImage: { 
+            postImage: {
                 path: require("./image.png"),
                 alt: "Imagem do Post",
-                title: "Imagem do Post" 
+                title: "Imagem do Post"
             },
             postDate: "17 de Novembro de 2024",
             headline: {
@@ -50,10 +58,10 @@ const HomePage: React.FC = () => {
             postCategory: ["Tecnologia", "Trabalho"]
         },
         {
-            postImage: { 
+            postImage: {
                 path: require("./image.png"),
                 alt: "Imagem do Post",
-                title: "Imagem do Post" 
+                title: "Imagem do Post"
             },
             postDate: "17 de Novembro de 2024",
             headline: {
@@ -64,10 +72,10 @@ const HomePage: React.FC = () => {
             postCategory: ["Tecnologia", "Trabalho"]
         },
         {
-            postImage: { 
+            postImage: {
                 path: require("./image.png"),
                 alt: "Imagem do Post",
-                title: "Imagem do Post" 
+                title: "Imagem do Post"
             },
             postDate: "17 de Novembro de 2024",
             headline: {
@@ -79,11 +87,41 @@ const HomePage: React.FC = () => {
         }
     ];
 
+    /** esta constante representa o retorno da api fictícia */
+    const comments: CommentsProps[] = [
+        {
+            firstLetter: "A",
+            username: "Ana Clara Oliveira",
+            content: "Artigo muito interessante! Acredito que a tecnologia, além de transformar o mercado de trabalho, também trará mais oportunidades.",
+            likeAmount: 2
+        },
+        {
+            firstLetter: "A",
+            username: "Ana Clara Oliveira",
+            content: "Artigo muito interessante! Acredito que a tecnologia, além de transformar o mercado de trabalho, também trará mais oportunidades.",
+            likeAmount: 8
+        },
+        {
+            firstLetter: "A",
+            username: "Ana Clara Oliveira",
+            content: "Artigo muito interessante! Acredito que a tecnologia, além de transformar o mercado de trabalho, também trará mais oportunidades.",
+            likeAmount: 3
+        },
+        {
+            firstLetter: "A",
+            username: "Ana Clara Oliveira",
+            content: "Artigo muito interessante! Acredito que a tecnologia, além de transformar o mercado de trabalho, também trará mais oportunidades.",
+            likeAmount: 1
+        }
+    ];
+
     return (
         <>
-            <PostLine 
+            <PostLine
                 title="Posts Relacionados"
                 posts={posts} />
+
+            <Comments comments={comments} />
         </>
     );
 };

@@ -7,7 +7,7 @@ export const CapterLeadCommentStyled = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     gap: 16px;
     height: auto;
     width: 100%;
