@@ -7,7 +7,6 @@ const PostStyled = styled.section`
     justify-content: flex-start;
     align-items: flex-start;
     gap: 16px;
-    padding: 24px;
     box-sizing: border-box;
     width: 100%;
 `;
