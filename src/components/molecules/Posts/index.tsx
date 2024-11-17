@@ -1,6 +1,9 @@
 import React from "react";
+
 import {
-    PostStyled,
+    LargePostStyled,
+    MediumPostStyled,
+    SmallPostStyled,
     PostWrapper,
     CategoryBox
 } from "./styled";
@@ -18,7 +21,7 @@ interface PostImageProps {
 };
 
 interface HeadlineProps {
-    variant: "primary" | "secondary";
+    variant: "primary" | "secondary" | "tertinary";
     content: string;
 };
 
@@ -28,7 +31,7 @@ interface PostProps {
     headline: HeadlineProps;
     description: string;
     postCategory: string[];
-    variant: "horizontal" | "vertical";
+    variant: "large" | "medium" | "small"
 };
 
 const Post: React.FC<PostProps> = (
@@ -41,8 +44,9 @@ const Post: React.FC<PostProps> = (
         variant
     }
 ) => {
-    return (
-        <PostStyled variant={variant}>
+
+    let PostComponent =
+        <LargePostStyled>
             <PostImage
                 path={postImage.path}
                 alt={postImage.alt}
@@ -55,14 +59,114 @@ const Post: React.FC<PostProps> = (
                 <Paragraph content={description} />
                 <CategoryBox>
                     {
-                        postCategory.map(category => (
-                            <CategoryTag name={category} />
+                        postCategory.map((category, index) => (
+                            <CategoryTag key={index} name={category} />
                         ))
                     }
                 </CategoryBox>
             </PostWrapper>
-        </PostStyled>
-    );
+        </LargePostStyled>;
+
+    switch (variant) {
+
+        case "large":
+            PostComponent =
+                <LargePostStyled>
+                    <PostImage
+                        path={postImage.path}
+                        alt={postImage.alt}
+                        title={postImage.title} />
+                    <PostWrapper>
+                        <Span content={postDate} />
+                        <Headline
+                            variant="secondary"
+                            content={headline.content} />
+                        <Paragraph content={description} />
+                        <CategoryBox>
+                            {
+                                postCategory.map((category, index) => (
+                                    <CategoryTag key={index} name={category} />
+                                ))
+                            }
+                        </CategoryBox>
+                    </PostWrapper>
+                </LargePostStyled>;
+            break;
+
+        case "medium":
+            PostComponent =
+                <MediumPostStyled>
+                    <PostImage
+                        path={postImage.path}
+                        alt={postImage.alt}
+                        title={postImage.title} />
+                    <PostWrapper>
+                        <Span content={postDate} />
+                        <Headline
+                            variant="secondary"
+                            content={headline.content} />
+                        <Paragraph content={description} />
+                        <CategoryBox>
+                            {
+                                postCategory.map((category, index) => (
+                                    <CategoryTag key={index} name={category} />
+                                ))
+                            }
+                        </CategoryBox>
+                    </PostWrapper>
+                </MediumPostStyled>;
+            break;
+
+        case "small":
+            PostComponent =
+                <SmallPostStyled>
+                    <PostImage
+                        path={postImage.path}
+                        alt={postImage.alt}
+                        title={postImage.title} />
+                    <PostWrapper>
+                        <Span content={postDate} />
+                        <Headline
+                            variant="quaternary"
+                            content={headline.content} />
+                        <Paragraph content={description} />
+                        <CategoryBox>
+                            {
+                                postCategory.map((category, index) => (
+                                    <CategoryTag key={index} name={category} />
+                                ))
+                            }
+                        </CategoryBox>
+                    </PostWrapper>
+                </SmallPostStyled>;
+            break;
+
+        default:
+            PostComponent =
+                <LargePostStyled>
+                    <PostImage
+                        path={postImage.path}
+                        alt={postImage.alt}
+                        title={postImage.title} />
+                    <PostWrapper>
+                        <Span content={postDate} />
+                        <Headline
+                            variant="secondary"
+                            content={headline.content} />
+                        <Paragraph content={description} />
+                        <CategoryBox>
+                            {
+                                postCategory.map((category, index) => (
+                                    <CategoryTag key={index} name={category} />
+                                ))
+                            }
+                        </CategoryBox>
+                    </PostWrapper>
+                </LargePostStyled>;
+            break;
+    };
+
+    return PostComponent;
 };
 
 export default Post;

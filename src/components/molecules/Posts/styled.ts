@@ -1,19 +1,27 @@
 import styled from "styled-components";
 
-interface StyledProps {
-    variant: "horizontal" | "vertical"
-};
-
-export const PostStyled = styled.div<StyledProps>`
+const PostStyled = styled.section`
     position: relative;
     display: flex;
-    flex-direction: ${props => props.variant === "horizontal" ? "row" : "column"};
+    flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
     gap: 16px;
     padding: 24px;
     box-sizing: border-box;
     width: 100%;
+`;
+
+export const LargePostStyled = styled(PostStyled)`
+    max-width: 600px;
+`;
+
+export const MediumPostStyled = styled(PostStyled)`
+    max-width: 392px;
+`;
+
+export const SmallPostStyled = styled(PostStyled)`
+    max-width: 288px;
 `;
 
 export const PostWrapper = styled.div`
