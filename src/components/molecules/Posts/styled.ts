@@ -12,15 +12,22 @@ const PostStyled = styled.section`
 `;
 
 export const LargePostStyled = styled(PostStyled)`
-    max-width: 600px;
+    /* max-width: 600px; */
 `;
 
 export const MediumPostStyled = styled(PostStyled)`
-    max-width: 392px;
+    /* max-width: 392px; */
 `;
 
 export const SmallPostStyled = styled(PostStyled)`
-    max-width: 288px;
+    /* max-width: 288px; */
+`;
+
+export const SmallHorizontalPostStyled = styled(PostStyled)`
+    flex-direction: row;
+    gap: 24px;
+    text-align: start;
+    max-width: 600px;
 `;
 
 export const PostWrapper = styled.div`
@@ -29,7 +36,7 @@ export const PostWrapper = styled.div`
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    gap: 16px;
+    gap: 8px;
 `;
 
 export const CategoryBox = styled.div`
