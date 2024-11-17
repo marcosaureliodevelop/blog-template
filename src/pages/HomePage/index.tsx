@@ -1,127 +1,32 @@
 import React from "react";
 
-import PostLine from "../../components/organisms/PostLine";
-import Comments from "../../components/organisms/Comments";
-
-interface PostProps {
-    postImage: {
-        path: string;
-        alt: string;
-        title: string;
-    };
-    postDate: string;
-    headline: {
-        variant: "primary" | "secondary" | "tertinary";
-        content: string;
-    };
-    description: string;
-    postCategory: string[];
-};
-
-interface CommentsProps {
-    firstLetter: string;
-    username: string;
-    content: string;
-    likeAmount: number;
-};
+import MainPost from "../../components/organisms/MainPost";
 
 const HomePage: React.FC = () => {
-
-    /** esta constante representa o retorno da api fictícia */
-    const posts: PostProps[] = [
-        {
-            postImage: {
-                path: require("./image.png"),
-                alt: "Imagem do Post",
-                title: "Imagem do Post"
-            },
-            postDate: "17 de Novembro de 2024",
-            headline: {
-                variant: "primary",
-                content: "O futuro do trabalho: Como a tecnologia está moldando as profissões do futuro"
-            },
-            description: "Explore as principais tendências tecnológicas que estão impactando o mercado de trabalho e descubra como se preparar para as profissões do futuro.",
-            postCategory: ["Tecnologia", "Trabalho"]
-        },
-        {
-            postImage: {
-                path: require("./image.png"),
-                alt: "Imagem do Post",
-                title: "Imagem do Post"
-            },
-            postDate: "17 de Novembro de 2024",
-            headline: {
-                variant: "primary",
-                content: "O futuro do trabalho: Como a tecnologia está moldando as profissões do futuro"
-            },
-            description: "Explore as principais tendências tecnológicas que estão impactando o mercado de trabalho e descubra como se preparar para as profissões do futuro.",
-            postCategory: ["Tecnologia", "Trabalho"]
-        },
-        {
-            postImage: {
-                path: require("./image.png"),
-                alt: "Imagem do Post",
-                title: "Imagem do Post"
-            },
-            postDate: "17 de Novembro de 2024",
-            headline: {
-                variant: "primary",
-                content: "O futuro do trabalho: Como a tecnologia está moldando as profissões do futuro"
-            },
-            description: "Explore as principais tendências tecnológicas que estão impactando o mercado de trabalho e descubra como se preparar para as profissões do futuro.",
-            postCategory: ["Tecnologia", "Trabalho"]
-        },
-        {
-            postImage: {
-                path: require("./image.png"),
-                alt: "Imagem do Post",
-                title: "Imagem do Post"
-            },
-            postDate: "17 de Novembro de 2024",
-            headline: {
-                variant: "primary",
-                content: "O futuro do trabalho: Como a tecnologia está moldando as profissões do futuro"
-            },
-            description: "Explore as principais tendências tecnológicas que estão impactando o mercado de trabalho e descubra como se preparar para as profissões do futuro.",
-            postCategory: ["Tecnologia", "Trabalho"]
-        }
-    ];
-
-    /** esta constante representa o retorno da api fictícia */
-    const comments: CommentsProps[] = [
-        {
-            firstLetter: "A",
-            username: "Ana Clara Oliveira",
-            content: "Artigo muito interessante! Acredito que a tecnologia, além de transformar o mercado de trabalho, também trará mais oportunidades.",
-            likeAmount: 2
-        },
-        {
-            firstLetter: "A",
-            username: "Ana Clara Oliveira",
-            content: "Artigo muito interessante! Acredito que a tecnologia, além de transformar o mercado de trabalho, também trará mais oportunidades.",
-            likeAmount: 8
-        },
-        {
-            firstLetter: "A",
-            username: "Ana Clara Oliveira",
-            content: "Artigo muito interessante! Acredito que a tecnologia, além de transformar o mercado de trabalho, também trará mais oportunidades.",
-            likeAmount: 3
-        },
-        {
-            firstLetter: "A",
-            username: "Ana Clara Oliveira",
-            content: "Artigo muito interessante! Acredito que a tecnologia, além de transformar o mercado de trabalho, também trará mais oportunidades.",
-            likeAmount: 1
-        }
-    ];
-
     return (
         <>
-            <PostLine
-                title="Posts Relacionados"
-                posts={posts} />
+            <MainPost
+                categories={['Tecnologia', 'Mercado de Trabalho', 'Inovação']}
+                title="O futuro do trabalho: Como a tecnologia está moldando as profissões do futuro"
+                postDate="17 Nov 20247"
+                postOwner={{ 
+                    firstLetter: "U",
+                    username: "Marcos Aurélio" 
+                }}
+                postImage={{ 
+                    path: "./image.png",
+                    alt: "Imagem do post",
+                    title: "Imagem do post" 
+                }}
+                description="Você já imaginou como será o mercado de trabalho daqui a 10 anos? A velocidade com que a tecnologia avança está transformando radicalmente as profissões, exigindo novas habilidades e criando oportunidades antes inimagináveis.
 
-            <Comments comments={comments} />
+A inteligência artificial, a automação e a digitalização estão redefinindo a maneira como trabalhamos. Neste artigo, vamos explorar como essas tecnologias estão moldando o futuro do trabalho e quais profissões estão em alta.
+
+Além da automação, a inteligência artificial está transformando diversas áreas, desde a saúde até o atendimento ao cliente. Ferramentas como chatbots e assistentes virtuais estão se tornando cada vez mais sofisticadas, exigindo profissionais capazes de desenvolvê-las e treiná-las.
+
+A economia gig economy, impulsionada por plataformas digitais, também está redefinindo o mercado de trabalho. Profissionais autônomos e freelancers têm mais oportunidades de trabalho, mas precisam desenvolver habilidades de gestão de tempo, marketing pessoal e adaptação a diferentes projetos.
+
+O futuro do trabalho é promissor para aqueles que estão dispostos a se adaptar e aprender novas habilidades. A tecnologia está criando um mundo de oportunidades, e aqueles que souberem aproveitar essas oportunidades estarão à frente." />
         </>
     );
 };
