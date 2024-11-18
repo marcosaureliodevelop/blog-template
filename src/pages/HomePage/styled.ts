@@ -1,19 +1,20 @@
 import styled from "styled-components";
 
-export const PaginationStyled = styled.div`
+export const HomePageStyled = styled.section`
     position: relative;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    gap: 48px;
     width: 100%;
 `;
 
-export const PageButtons = styled.div`
+export const CapterFooter = styled.section`
     position: relative;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 8px;
+    width: 100%;
 `;

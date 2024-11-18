@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Devices } from "../../../styles/helpers/Devices";
 
 export const CapterLeadInputStyled = styled.div`
     display: flex;
@@ -7,4 +8,8 @@ export const CapterLeadInputStyled = styled.div`
     align-items: center;
     gap: 8px;
     width: 100%;
+
+    @media screen and (max-width: ${Devices.largePhone}){
+        flex-direction: column;
+    };
 `;

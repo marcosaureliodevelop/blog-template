@@ -7,4 +7,5 @@ export const HeaderStyled = styled.header`
     justify-content: flex-start;
     align-items: center;
     gap: 40px;
+    width: 100%;
 `;

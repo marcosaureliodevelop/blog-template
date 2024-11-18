@@ -17,6 +17,6 @@ export const FlexContainer = styled.div<FlexProps>`
     gap: ${props => props.gap ? props.gap : 0}px;
 
     @media screen and (min-width: ${Devices.largeDesktop}) {
-        width: 1440px;
+        width: 1220px;
     };
 `;

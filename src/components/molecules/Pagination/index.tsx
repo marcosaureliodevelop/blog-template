@@ -8,11 +8,6 @@ import Button from "../../atoms/Button";
 
 interface PaginationProps { };
 
-/**
- * array de itens
- * setar os posts no layout
- */
-
 const Pagination: React.FC<PaginationProps> = ({ }) => {
     return (
         <PaginationStyled>

@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import { FooterStyled } from "./styled";
+import { FooterStyled, FooterContainer } from "./styled";
 
-import { FlexContainer } from "../../../styles/helpers/Containers";
 import LargeBrand from "../../molecules/LargeBrand";
 import FooterLinks from "../../molecules/FooterLinks";
 
@@ -27,17 +26,14 @@ const Footer: React.FC = () => {
 
     return (
         <FooterStyled>
-            <FlexContainer
-                direction="row"
-                justify="space-between"
-                align="flex-start">
+            <FooterContainer>
 
-                <LargeBrand />
-                <FooterLinks links={cateogories} />
-                <FooterLinks links={about} />
-                <FooterLinks links={social} />
+                <LargeBrand centered={true} />
+                <FooterLinks links={cateogories} centered={true} />
+                <FooterLinks links={about} centered={true} />
+                <FooterLinks links={social} centered={true} />
 
-            </FlexContainer>
+            </FooterContainer>
         </FooterStyled>
     );
 };

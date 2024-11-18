@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Devices } from "../../../styles/helpers/Devices";
 
-export const TopPostsStyled = styled.header`
+export const TopPostsStyled = styled.section`
     position: relative;
     display: flex;
     justify-content: center;

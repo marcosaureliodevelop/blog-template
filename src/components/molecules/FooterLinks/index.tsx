@@ -13,11 +13,12 @@ interface LinksProps {
 
 interface FooterLinksProps {
     links: LinksProps[];
+    centered?: boolean;
 };
 
-const FooterLinks: React.FC<FooterLinksProps> = ({ links }) => {
+const FooterLinks: React.FC<FooterLinksProps> = ({ links, centered }) => {
     return (
-        <FooterLinksStyled>
+        <FooterLinksStyled centered={centered}>
             {(links.map(item => (
                 <Anchor 
                     url={item.url}

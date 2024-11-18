@@ -7,9 +7,13 @@ import Paragraph from "../../atoms/Paragraph";
 
 import { Colors } from "../../../styles/helpers/Colors";
 
-const LargeBrand: React.FC = () => {
+interface LargeBrandProps {
+    centered?: boolean
+};
+
+const LargeBrand: React.FC<LargeBrandProps> = ({ centered }) => {
     return (
-        <LargeBrandStyled>
+        <LargeBrandStyled centered={centered}>
             <BrandIcon width={208} height={36} color={Colors.white} />
             <Paragraph content="© 2024 BlogTemplate. All rights reserved." />
         </LargeBrandStyled>

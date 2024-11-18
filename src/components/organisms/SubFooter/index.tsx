@@ -1,23 +1,16 @@
 import React from "react";
-import { SubFooterStyled } from "./styled";
+import { SubFooterStyled, SubFooterContainer } from "./styled";
 
-import { FlexContainer } from "../../../styles/helpers/Containers";
 import PersuasiveWrapping from "../../molecules/PersuasiveWrapping";
 import CapterLeadInput from "../../molecules/CapterLeadInput";
 
 const SubFooter: React.FC = () => {
     return (
         <SubFooterStyled>
-            <FlexContainer
-                direction="row"
-                justify="space-between"
-                align="center"
-                gap={24}>
-
-                    <PersuasiveWrapping />
-                    <CapterLeadInput />
-
-            </FlexContainer>
+            <SubFooterContainer>
+                <PersuasiveWrapping />
+                <CapterLeadInput />
+            </SubFooterContainer>
         </SubFooterStyled>
     );
 };
