@@ -33,7 +33,7 @@ const PostLine: React.FC<PostLineProps> = ({ title, posts }) => {
     return (
         <PostLineStyled>
             <PostLineContainer>
-                <Headline variant="secondary" content="Posts realizados" />
+                <Headline variant="secondary" content={title} />
                 <PostLineContainerWrapper>
 
                     {posts.map(item => (

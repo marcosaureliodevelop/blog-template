@@ -9,7 +9,7 @@ const Routes: React.FC = () => {
         <BrowserRouter>
             <RouterDom>
                 <Route path="/" element={<Home />} />
-                <Route path="/view/:post" element={<ViewPost />} />
+                <Route path="/view" element={<ViewPost />} />
             </RouterDom>
         </BrowserRouter>
     );

@@ -20,7 +20,7 @@ export const MediumPostStyled = styled(PostStyled)`
 `;
 
 export const SmallPostStyled = styled(PostStyled)`
-    /* max-width: 288px; */
+    max-width: 288px;
 `;
 
 export const SmallHorizontalPostStyled = styled(PostStyled)`
