@@ -1,4 +1,6 @@
 import React, { ReactElement } from "react";
+import { motion } from "framer-motion";
+
 import {
     PrimaryButton,
     LighterButton,
@@ -14,40 +16,58 @@ interface ButtonProps {
     iconLeft?: ReactElement;
 };
 
+const AnimPrimaryButton = motion(PrimaryButton);
+const AnimSecondaryButton = motion(SecondaryButton);
+const AnimTertiaryButton = motion(TertiaryButton);
+const AnimLighterButton = motion(LighterButton);
+
 const Button: React.FC<ButtonProps> = ({ content, variant, method, iconRight, iconLeft }) => {
+
     let button: React.ReactElement =
-        <PrimaryButton onClick={method}>
+        <AnimPrimaryButton onClick={method}
+            whileHover={{ scale: 1.06 }}
+            whileTap={{ scale: 0.9 }}
+            transition={{ type: "spring", stiffness: 400, damping: 12 }}>
             {iconLeft}
             {content}
             {iconRight}
-        </PrimaryButton>;
+        </AnimPrimaryButton>;
 
     switch (variant) {
         case "lighter":
             button =
-                <LighterButton onClick={method}>
+                <AnimLighterButton onClick={method}
+                    whileHover={{ scale: 1.06 }}
+                    whileTap={{ scale: 0.9 }}
+                    transition={{ type: "spring", stiffness: 400, damping: 12 }}>
                     {iconLeft}
                     {content}
                     {iconRight}
-                </LighterButton>
+                </AnimLighterButton>
             break;
 
         case "secondary":
             button =
-                <SecondaryButton onClick={method}>
+                <AnimSecondaryButton onClick={method}
+                    whileHover={{ scale: 1.06 }}
+                    whileTap={{ scale: 0.9 }}
+                    transition={{ type: "spring", stiffness: 400, damping: 12 }}>
                     {iconLeft}
                     {content}
                     {iconRight}
-                </SecondaryButton>
+                </AnimSecondaryButton>
             break;
 
         case "tertiary":
             button =
-                <TertiaryButton onClick={method}>
+                <AnimTertiaryButton onClick={method}
+                    whileHover={{ scale: 1.06 }}
+                    whileTap={{ scale: 0.9 }}
+                    transition={{ type: "spring", stiffness: 400, damping: 12 }}>
                     {iconLeft}
                     {content}
                     {iconRight}
-                </TertiaryButton>
+                </AnimTertiaryButton>
             break;
     };
 

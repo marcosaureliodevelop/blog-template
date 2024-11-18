@@ -18,3 +18,7 @@ export const CapterFooter = styled.section`
     align-items: center;
     width: 100%;
 `;
+
+export const MotionSection = styled.div`
+    width: 100%;
+`;

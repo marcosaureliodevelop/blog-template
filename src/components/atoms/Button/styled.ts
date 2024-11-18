@@ -29,12 +29,11 @@ const StyledButton = styled.button<ButtonProps>`
     border-radius: ${Borders.default};
     outline: 3px solid transparent;
     line-height: 100%;
-    transition: .2s;
     box-sizing: border-box;
 
     &:hover {
         cursor: pointer;
-    };
+    }
 
     @media screen and (max-width: ${Devices.largePhone}) {
         font-size: 14px;

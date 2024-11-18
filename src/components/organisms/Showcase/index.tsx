@@ -23,12 +23,12 @@ const Showcase: React.FC = () => {
                         }}
                         postDate="26 Outubro 2024"
                         headline={{
-                            variant: "secondary",
+                            variant: "tertinary",
                             content: "O futuro do trabalho: Como a tecnologia está moldando as profissões do futuro"
                         }}
                         description="Explore as principais tendências tecnológicas que estão impactando o mercado de trabalho e descubra como se preparar para as profissões do futuro."
                         postCategory={["Tecnologia", "Desenvolvimento", "Trabalho"]}
-                        variant="large" />
+                        variant="medium" />
 
                     <Posts
                         postImage={{
@@ -38,12 +38,12 @@ const Showcase: React.FC = () => {
                         }}
                         postDate="26 Outubro 2024"
                         headline={{
-                            variant: "secondary",
+                            variant: "tertinary",
                             content: "O futuro do trabalho: Como a tecnologia está moldando as profissões do futuro"
                         }}
                         description="Explore as principais tendências tecnológicas que estão impactando o mercado de trabalho e descubra como se preparar para as profissões do futuro."
                         postCategory={["Tecnologia", "Desenvolvimento", "Trabalho"]}
-                        variant="large" />
+                        variant="medium" />
 
                     <Posts
                         postImage={{
@@ -53,12 +53,12 @@ const Showcase: React.FC = () => {
                         }}
                         postDate="26 Outubro 2024"
                         headline={{
-                            variant: "secondary",
+                            variant: "tertinary",
                             content: "O futuro do trabalho: Como a tecnologia está moldando as profissões do futuro"
                         }}
                         description="Explore as principais tendências tecnológicas que estão impactando o mercado de trabalho e descubra como se preparar para as profissões do futuro."
                         postCategory={["Tecnologia", "Desenvolvimento", "Trabalho"]}
-                        variant="large" />
+                        variant="medium" />
 
                     <Posts
                         postImage={{
@@ -68,12 +68,12 @@ const Showcase: React.FC = () => {
                         }}
                         postDate="26 Outubro 2024"
                         headline={{
-                            variant: "secondary",
+                            variant: "tertinary",
                             content: "O futuro do trabalho: Como a tecnologia está moldando as profissões do futuro"
                         }}
                         description="Explore as principais tendências tecnológicas que estão impactando o mercado de trabalho e descubra como se preparar para as profissões do futuro."
                         postCategory={["Tecnologia", "Desenvolvimento", "Trabalho"]}
-                        variant="large" />
+                        variant="medium" />
 
                     <Posts
                         postImage={{
@@ -83,12 +83,12 @@ const Showcase: React.FC = () => {
                         }}
                         postDate="26 Outubro 2024"
                         headline={{
-                            variant: "secondary",
+                            variant: "tertinary",
                             content: "O futuro do trabalho: Como a tecnologia está moldando as profissões do futuro"
                         }}
                         description="Explore as principais tendências tecnológicas que estão impactando o mercado de trabalho e descubra como se preparar para as profissões do futuro."
                         postCategory={["Tecnologia", "Desenvolvimento", "Trabalho"]}
-                        variant="large" />
+                        variant="medium" />
 
                     <Posts
                         postImage={{
@@ -98,12 +98,12 @@ const Showcase: React.FC = () => {
                         }}
                         postDate="26 Outubro 2024"
                         headline={{
-                            variant: "secondary",
+                            variant: "tertinary",
                             content: "O futuro do trabalho: Como a tecnologia está moldando as profissões do futuro"
                         }}
                         description="Explore as principais tendências tecnológicas que estão impactando o mercado de trabalho e descubra como se preparar para as profissões do futuro."
                         postCategory={["Tecnologia", "Desenvolvimento", "Trabalho"]}
-                        variant="large" />
+                        variant="medium" />
 
                     <Posts
                         postImage={{
@@ -113,12 +113,12 @@ const Showcase: React.FC = () => {
                         }}
                         postDate="26 Outubro 2024"
                         headline={{
-                            variant: "secondary",
+                            variant: "tertinary",
                             content: "O futuro do trabalho: Como a tecnologia está moldando as profissões do futuro"
                         }}
                         description="Explore as principais tendências tecnológicas que estão impactando o mercado de trabalho e descubra como se preparar para as profissões do futuro."
                         postCategory={["Tecnologia", "Desenvolvimento", "Trabalho"]}
-                        variant="large" />
+                        variant="medium" />
 
                     <Posts
                         postImage={{
@@ -128,12 +128,12 @@ const Showcase: React.FC = () => {
                         }}
                         postDate="26 Outubro 2024"
                         headline={{
-                            variant: "secondary",
+                            variant: "tertinary",
                             content: "O futuro do trabalho: Como a tecnologia está moldando as profissões do futuro"
                         }}
                         description="Explore as principais tendências tecnológicas que estão impactando o mercado de trabalho e descubra como se preparar para as profissões do futuro."
                         postCategory={["Tecnologia", "Desenvolvimento", "Trabalho"]}
-                        variant="large" />
+                        variant="medium" />
 
                     <Posts
                         postImage={{
@@ -143,12 +143,12 @@ const Showcase: React.FC = () => {
                         }}
                         postDate="26 Outubro 2024"
                         headline={{
-                            variant: "secondary",
+                            variant: "tertinary",
                             content: "O futuro do trabalho: Como a tecnologia está moldando as profissões do futuro"
                         }}
                         description="Explore as principais tendências tecnológicas que estão impactando o mercado de trabalho e descubra como se preparar para as profissões do futuro."
                         postCategory={["Tecnologia", "Desenvolvimento", "Trabalho"]}
-                        variant="large" />
+                        variant="medium" />
                 </ShowcaseWrapper>
             </ShowcaseContainer>
         </ShowcaseStyled>

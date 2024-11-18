@@ -21,7 +21,7 @@ interface PostImageProps {
 };
 
 interface HeadlineProps {
-    variant: "primary" | "secondary" | "tertinary";
+    variant: "primary" | "secondary" | "tertinary" | "quaternary";
     content: string;
 };
 
@@ -103,7 +103,7 @@ const Post: React.FC<PostProps> = (
                     <PostWrapper>
                         <Span content={postDate} />
                         <Headline
-                            variant="secondary"
+                            variant="tertiary"
                             content={headline.content} />
                         <Paragraph content={description} />
                         <CategoryBox>

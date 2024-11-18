@@ -8,4 +8,8 @@ export const PostImageStyled = styled.img`
     object-fit: cover;
     border-radius: ${Borders.default};
     background-color: ${Colors.primary};
+
+    &:hover {
+        cursor: pointer;
+    }
 `;
